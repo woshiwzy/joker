@@ -1,0 +1,5 @@
+<resources>
+
+    <integer name="padding_star">23</integer>
+    <integer name="under_view_segment_height">5</integer>
+</resources>

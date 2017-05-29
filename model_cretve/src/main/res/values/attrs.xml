@@ -1,0 +1,185 @@
+<resources>
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_outside_color" format="color" />
+        <attr name="border_inside_color" format="color" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="BGAMoocStyleRefreshView">
+        <attr name="mv_ultimateColor" format="reference|color"/>
+        <attr name="mv_originalImg" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="AutoTextView">
+        <attr name="isChangeHeight" format="boolean" />
+        <attr name="minTextSize" format="dimension" />
+        <attr name="maxTextSize" format="dimension" />
+        <attr name="isResizeOnce" format="boolean" />
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="SegmentControl">
+        <attr name="cornerRadius" format="dimension|reference" />
+        <attr name="colors" format="color|reference" />
+        <attr name="texts" format="string|reference" />
+        <attr name="textSize" format="dimension|reference"/>
+        <attr name="direction" format="enum">
+            <enum name="horizon" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="gaps" format="dimension|reference" />
+        <attr name="horizonGap" format="dimension|reference" />
+        <attr name="verticalGap" format="dimension|reference" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="FontTextView">
+        <attr name="font_path" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="FontTextLayout">
+        <attr name="ftl_font_path" format="string"/>
+    </declare-styleable>
+
+
+
+
+
+    <declare-styleable name="RangeSeekBar">
+        <!-- the minimum of the range -->
+        <attr name="absoluteMinValue" format="integer|float"/>
+
+        <!-- the maximum of the range -->
+        <attr name="absoluteMaxValue" format="integer|float"/>
+
+        <!-- show a single slider -->
+        <attr name="singleThumb" format="boolean"/>
+
+        <!-- show the labels on the right and left-->
+        <attr name="showLabels" format="boolean"/>
+
+        <!-- alwaysActive will make the buttons and bar always draw as the activeColor (the default is false) -->
+        <attr name="alwaysActive" format="boolean"/>
+
+        <!-- show the currently selected value above each thumb (defaults to true) -->
+        <attr name="valuesAboveThumbs" format="boolean"/>
+
+        <!-- padding on either side on the slider -->
+        <attr name="internalPadding" format="dimension"/>
+
+        <!-- the height of the bar -->
+        <attr name="barHeight" format="dimension"/>
+
+        <!-- the color of the bar that is not selected -->
+        <attr name="defaultColor" format="color"/>
+
+        <!-- the color of the bar that is selected -->
+        <attr name="activeColor" format="color"/>
+
+        <!-- the color of the text above thumbs -->
+        <attr name="textAboveThumbsColor" format="color"/>
+
+        <!-- set drawables for thumb handles -->
+        <attr name="thumbNormal" format="reference"/>
+        <attr name="thumbPressed" format="reference"/>
+        <attr name="thumbDisabled" format="reference"/>
+
+        <!-- thumb shadow specifications -->
+        <attr name="thumbShadow" format="boolean"/>
+        <attr name="thumbShadowColor" format="color"/>
+        <attr name="thumbShadowXOffset" format="dimension"/>
+        <attr name="thumbShadowYOffset" format="dimension"/>
+        <attr name="thumbShadowBlur" format="dimension"/>
+
+        <!-- to activate the thumbs and texts when the min and max values are the default ones (defaults to false) -->
+        <attr name="activateOnDefaultValues" format="boolean"/>
+    </declare-styleable>
+
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <attr name="src" format="reference"></attr>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+        <attr name="src" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="RelativeTimeTextView">
+        <attr name="relative_time_prefix" format="string" />
+        <attr name="relative_time_suffix" format="string" />
+        <attr name="reference_time" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="checkImageView">
+        <attr name="checkimg_check" format="reference" />
+        <attr name="checkimg_uncheck" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="checkTextView">
+        <attr name="checkimg_check_color" format="color" />
+        <attr name="checkimg_uncheck_color" format="color" />
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

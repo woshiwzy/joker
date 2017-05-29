@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="bg_color">#f6f5f9</color>
+
+
+
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextGray">#979797</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+
+    <!-- Base item color -->
+    <color name="colorDivider">#C9C7CD</color>
+
+
+    <!-- FRC -->
+    <color name="colorTabSelected">#FF0076FF</color>
+    <color name="colorTabUnselected">#FF929292</color>
+    <color name="colorGrayBg">#F6F5F5</color>
+    <color name="colorDelete">#F5A623</color>
+
+    <color name="colorTranslucentBlack">#55000000</color>
+    <color name="colorTranslucentWhite">#33FFFFFF</color>
+    <color name="colorTransparentWhite">#00000000</color>
+</resources>

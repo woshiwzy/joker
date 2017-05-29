@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentBottom="true"
+    android:clickable="true"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_wheel_view_top_bar">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/mm_title_btn_right"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@drawable/mm_title_act_btn"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.common.view.wheel.WheelView
+                android:id="@+id/wheelViewProvince"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1" />
+
+            <com.common.view.wheel.WheelView
+                android:id="@+id/wheelViewCity"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1" />
+
+            <com.common.view.wheel.WheelView
+                android:id="@+id/wheelViewThrid"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

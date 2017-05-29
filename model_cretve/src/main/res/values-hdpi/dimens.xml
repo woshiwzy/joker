@@ -1,0 +1,6 @@
+<resources>
+
+    <dimen name="margin_indicator">5dp</dimen>
+    <dimen name="star_rect">30dp</dimen>
+    <dimen name="indicator_size">2dp</dimen>
+</resources>

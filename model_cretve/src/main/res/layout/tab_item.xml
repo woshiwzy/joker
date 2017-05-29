@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.tab.widget.CheckImageView
+        android:id="@+id/imageViewTabImg"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+    <com.tab.widget.CheckTextView
+        android:id="@+id/textViewTabTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

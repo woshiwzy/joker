@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">笑歪歪</string>
+    <string name="tab_title_text">文字笑话</string>
+    <string name="tab_title_img">图文搞怪</string>
+    <string name="tab_title_gif">GIF</string>
+    <string name="tab_title_video">搞笑视频</string>
+    <string name="tab_title_profile">Me</string>
+
+</resources>

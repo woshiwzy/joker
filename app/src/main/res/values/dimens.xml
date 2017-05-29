@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_height" >60dp</dimen>
+
+
+
+
+
+
+    <dimen name="large_horizontal_margin">24dp</dimen>
+    <dimen name="large_vertical_margin">15dp</dimen>
+    <dimen name="mid_horizontal_margin">16dp</dimen>
+    <dimen name="mid_vertical_margin">10dp</dimen>
+    <dimen name="small_horizontal_margin">8dp</dimen>
+    <dimen name="small_vertical_margin">5dp</dimen>
+    <dimen name="xs_horizontal_margin">3dp</dimen>
+    <dimen name="xs_vertical_margin">2dp</dimen>
+
+    <dimen name="divider_height">3dp</dimen>
+    <dimen name="divider_width">3dp</dimen>
+
+    <dimen name="divider_thin_height">1dp</dimen>
+    <dimen name="divider_thin_width">1dp</dimen>
+
+    <!--<dimen name="appbar_height_portrait">56dp</dimen>-->
+    <dimen name="appbar_height_portrait">56dp</dimen>
+    <dimen name="appbar_height_landscape">48dp</dimen>
+    <dimen name="appbar_height_tablet">64dp</dimen>
+    <dimen name="statusBar_height_portrait">24dp</dimen>
+    <dimen name="topbar_height_portrait">81dp</dimen>
+
+    <dimen name="appbar_icon_size">24dp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+
+    <dimen name="tab_height_tablet">48dp</dimen>
+
+
+    <dimen name="content_horizontal_margin">80dp</dimen>
+    <dimen name="content_vertical_margin">80dp</dimen>
+    <dimen name="content_horizontal_width">90dp</dimen>
+
+    <dimen name="line_margin">10dp</dimen>
+
+    <dimen name="Text_Display4">112sp</dimen>
+    <dimen name="Text_Display3">56sp</dimen>
+    <dimen name="Text_Display2">45sp</dimen>
+    <dimen name="Text_Display1">34sp</dimen>
+    <dimen name="Text_Headline">24sp</dimen>
+    <dimen name="Text_Title">20sp</dimen>
+    <dimen name="Text_Subtitle">18sp</dimen>
+    <dimen name="Text_Subheading">16sp</dimen>
+    <dimen name="Text_Body2">14sp</dimen>
+    <dimen name="Text_Body1">13sp</dimen>
+    <dimen name="Text_Caption">12sp</dimen>
+    <dimen name="Text_Button">14sp</dimen>
+
+
+    <!-- FRC -->
+    <dimen name="fragmentMe_listIconSize">25dp</dimen>
+    <dimen name="activityProfile_headIconSize">90dp</dimen>
+    <dimen name="campsiteList_itemHeight">100dp</dimen>
+    <dimen name="campsiteList_itemIconSize">80dp</dimen>
+    <dimen name="campsiteList_itemTypeSize">40dp</dimen>
+
+    <dimen name="memberCardHeightSmall">80dp</dimen>
+
+    <dimen name="filterIconSize">70dp</dimen>
+    <dimen name="bigButtonHeight">40dp</dimen>
+
+
+    <dimen name="margin_super">60dp</dimen>
+    <dimen name="margin_big">30dp</dimen>
+    <dimen name="margin_content">20dp</dimen>
+    <dimen name="margin_mid">10dp</dimen>
+    <dimen name="margin_mid_half">5dp</dimen>
+    <dimen name="margin_micro">3dp</dimen>
+
+    <dimen name="text_size_title_super">36sp</dimen>
+    <dimen name="text_size_title_large">28sp</dimen>
+    <dimen name="text_size_title">26sp</dimen>
+    <dimen name="text_size_title_second_mid">24sp</dimen>
+    <dimen name="text_size_title_mid">22sp</dimen>
+    <dimen name="text_size_title_second">18sp</dimen>
+    <dimen name="text_size_title_third">16sp</dimen>
+    <dimen name="text_size_content">16sp</dimen>
+    <dimen name="text_size_more">15sp</dimen>
+    <dimen name="text_size_header_detail">15sp</dimen>
+
+    <dimen name="text_size_content_small_1">14sp</dimen>
+    <dimen name="text_size_content_small_1_1">12sp</dimen>
+    <dimen name="text_size_content_small_1_1_1">11sp</dimen>
+    <dimen name="text_size_content_small_2">10sp</dimen>
+    <dimen name="text_size_content_small_2_1">9sp</dimen>
+    <dimen name="text_size_content_small_3">8sp</dimen>
+
+
+    <dimen name="input_deactive_height">140dp</dimen>
+    <dimen name="input_item_height">40dp</dimen>
+    <dimen name="input_item_height_b1">50dp</dimen>
+    <dimen name="input_item_height_p">70dp</dimen>
+    <dimen name="input_content_height">120dp</dimen>
+
+
+    <dimen name="input_item_height_small">40dp</dimen>
+    <dimen name="input_item_height_small_s">35dp</dimen>
+    <dimen name="input_item_height_small_2">80dp</dimen>
+    <dimen name="input_item_height_small_3">120dp</dimen>
+    <dimen name="input_item_height_small_4">160dp</dimen>
+</resources>
