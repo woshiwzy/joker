@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_item_height_b1"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_header">
+
+
+        <ImageView
+            android:id="@+id/viewLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_mid"
+            android:src="@drawable/icon_logout" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人中心" />
+
+
+        <ImageView
+            android:id="@+id/viewFeedBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_mid"
+            android:src="@drawable/icon_feedback" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#F6CBDB" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewHeader"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center">
+
+
+                <com.common.view.CircleImageView
+                    android:id="@+id/circleImageViewHeader"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#EFEEF0" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_micro">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="用户名："
+                        android:textSize="@dimen/text_size_content_small_1" />
+
+                    <TextView
+                        android:id="@+id/textViewUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_mid"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_ios_blue" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/margin_micro"
+                    android:background="#EFEEF0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="邮   箱："
+                        android:textSize="@dimen/text_size_content_small_1" />
+
+                    <TextView
+                        android:id="@+id/textViewEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_mid"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_ios_blue" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/margin_micro"
+                    android:background="#EFEEF0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="发帖数："
+                        android:textSize="@dimen/text_size_content_small_1" />
+
+                    <TextView
+                        android:id="@+id/textViewPostCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_mid"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_ios_blue" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/viewTop"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentTop="true"
+                android:background="#EFEEF0" />
+
+            <LinearLayout
+                android:id="@+id/viewMenus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewTop"
+                android:background="@drawable/shape_input"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textViewEditInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_item_height"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/margin_mid"
+                    android:text="编辑个人信息"
+                    android:textSize="@dimen/text_size_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EFEEF0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewUpdateJoke"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_item_height"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="@dimen/margin_mid"
+                        android:text="提交笑话"
+                        android:textSize="@dimen/text_size_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/viewMyJokes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/viewMenus"
+                android:background="#bbffaa"
+                android:orientation="vertical">
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewLoginContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:paddingBottom="40dp"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:id="@+id/viewLoginCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_content"
+            android:background="@drawable/shape_white_round_base"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_item_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:minWidth="80dp"
+                    android:text="邮   箱：" />
+
+                <EditText
+                    android:id="@+id/editUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/margin_micro"
+                android:layout_marginRight="@dimen/margin_micro"
+                android:background="#F6CBDB" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_item_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:minWidth="80dp"
+                    android:text="密   码：" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewLoginCenter">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_item_height"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:background="@drawable/shape_button"
+                    android:text="登  录" />
+
+
+                <Button
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_item_height"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:background="@drawable/shape_button"
+                    android:text="注  册"
+                    android:textColor="@color/text_color_ios_blue" />
+
+                <TextView
+                    android:id="@+id/textViewForgetPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/input_item_height"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:gravity="bottom"
+                    android:text="忘记密码"
+                    android:textSize="@dimen/text_size_content_small_1" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/viewLoginCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_mid"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -33,6 +33,7 @@ public abstract class BasePage {
     public static final int PERMISSIONS_REQUEST_CODE = 0;
     public static final int FILE_PICKER_REQUEST_CODE = 1;
 
+    public static final short SHORT_GO_DETAIL=2;
 
     protected View rootView;
     protected int showCount = 0;

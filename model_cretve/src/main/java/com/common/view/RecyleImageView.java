@@ -9,7 +9,7 @@ import android.widget.ImageView;
  * Created by wangzy on 2016/12/2.
  */
 
-public class RecyleImageView extends ImageView {
+public class RecyleImageView extends android.support.v7.widget.AppCompatImageView {
 
     public RecyleImageView(Context context) {
         super(context);

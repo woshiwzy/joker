@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v7.widget.AppCompatTextView;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -21,7 +22,7 @@ import java.lang.ref.WeakReference;
  * @see #setReferenceTime(long)
  *
  */
-public class RelativeTimeTextView extends TextView {
+public class RelativeTimeTextView extends AppCompatTextView {
 
     private static final long INITIAL_UPDATE_INTERVAL = DateUtils.MINUTE_IN_MILLIS;
 

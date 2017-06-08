@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ import com.common.callback.OnProgressDialogCallback;
 import com.common.task.BaseTask;
 import com.common.util.CustomToast;
 import com.common.util.StringUtils;
+import com.common.util.Tool;
 import com.cretve.model.R;
 
 import java.util.HashMap;
@@ -47,6 +49,10 @@ public class BaseActivity extends AppCompatActivity implements OnProgressDialogC
     public BaseTask baseTask;
     private AsyncTask mTaskRunning;
     private HashMap<BaseTask, Dialog> taskMap;//= new HashMap<BaseTask, Dialog>();
+    public Point point;
+
+
+    public short SPLASH_TO_MAIN=100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,8 @@ public class BaseActivity extends AppCompatActivity implements OnProgressDialogC
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         taskMap = new HashMap<BaseTask, Dialog>();
 //		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        this.point = Tool.getDisplayMetrics(this);
+
         crateDialog();
     }
 
@@ -218,10 +226,7 @@ public class BaseActivity extends AppCompatActivity implements OnProgressDialogC
 
     @Override
     public void onBackPressed() {
-
-
         backFinish();
-        return;
     }
 
 

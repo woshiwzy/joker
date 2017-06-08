@@ -1,1 +1,1 @@
-include ':app', ':model_cretve'
+include ':app', ':model_cretve', ':vitamio', ':mediachooser', ':pickerview', ':filepickermodel'

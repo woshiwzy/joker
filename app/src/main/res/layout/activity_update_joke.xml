@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.wangzy.joker.activity.UpdateLoadJokeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_micro"
+        android:layout_marginRight="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_big"
+        android:background="@drawable/shape_white_round_base"
+        android:gravity="center_vertical|top"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_item_height"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="标   题："
+                android:textSize="@dimen/text_size_content_small_1" />
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_item_height"
+                android:layout_marginLeft="@dimen/margin_mid"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:hint="请输入一个短小的标题"
+                android:maxLines="1"
+                android:textColor="@color/text_color_ios_blue"
+                android:textSize="@dimen/text_size_content_small_1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin_micro"
+            android:background="#EFEEF0" />
+
+        <LinearLayout
+            android:id="@+id/viewTypeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_item_height"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="类型："
+                android:textSize="@dimen/text_size_content_small_1" />
+
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_item_height"
+                android:layout_marginLeft="@dimen/margin_mid"
+                android:layout_weight="3"
+                android:gravity="center_vertical|left"
+                android:hint="请点击选择类型"
+                android:maxLines="1"
+                android:textColor="@color/text_color_ios_blue"
+                android:textSize="@dimen/text_size_content_small_1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin_micro"
+            android:background="#EFEEF0" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:gravity="center"
+            android:minHeight="@dimen/input_content_height">
+
+            <LinearLayout
+                android:id="@+id/viewTextContentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextContent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_mid"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:gravity="top|left"
+                    android:hint="请输入文字内容"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:maxLines="6"
+                    android:padding="@dimen/margin_micro"
+                    android:textSize="@dimen/text_size_more" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/viewImageConainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:minHeight="150dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageViewPicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_micro" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewGifConainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="@dimen/input_item_height_b1"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/simpleDrawView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_mid"
+                    fresco:viewAspectRatio="1.33" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewVideoConatainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:minHeight="150dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin_micro"
+            android:background="#EFEEF0" />
+
+        <Button
+            android:id="@+id/buttontSelectContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_item_height"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_mid"
+            android:background="@drawable/shape_button"
+            android:text="选择多媒体文件"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonUpload"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_item_height"
+            android:layout_marginBottom="@dimen/margin_mid"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_mid"
+            android:background="@drawable/shape_button"
+            android:text="提交" />
+
+    </LinearLayout>
+
+</RelativeLayout>

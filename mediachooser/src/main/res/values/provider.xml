@@ -1,0 +1,4 @@
+<resources>
+
+    <string name="provider_name" translatable="false">com.frc.android.provider</string>
+</resources>

@@ -5,19 +5,14 @@
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:layout_marginBottom="@dimen/margin_mid"
-    android:layout_marginLeft="@dimen/margin_mid"
-    android:layout_marginRight="@dimen/margin_mid"
     android:layout_marginTop="@dimen/margin_mid"
-    android:paddingLeft="@dimen/margin_mid"
-    android:paddingRight="@dimen/margin_mid"
-
     card_view:cardBackgroundColor="@android:color/white"
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="5dp">
 
     <LinearLayout
+        android:id="@+id/rootView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -74,6 +69,7 @@
                 android:id="@+id/imageViewImg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scaleType="fitXY"
                 android:visibility="invisible" />
 
 
@@ -100,15 +96,27 @@
                 android:visibility="visible" />
 
 
-            <ImageView
-                android:id="@+id/imageViewParise"
+            <RelativeLayout
+                android:id="@+id/relativeLayoutBuleContents"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
-                android:layout_toLeftOf="@id/textViewNiceCount"
-                android:src="@drawable/icon_good" />
+                android:layout_toLeftOf="@id/textViewNiceCount">
 
+
+                <com.common.view.BubbleView
+                    android:id="@+id/bubbleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imageViewParise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_good" />
+
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/imageViewReport"
@@ -116,9 +124,29 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
-                android:layout_toLeftOf="@id/imageViewParise"
+                android:layout_toLeftOf="@id/relativeLayoutBuleContents"
                 android:src="@drawable/icon_report" />
 
+
+            <ImageView
+                android:id="@+id/imageViewShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_mid"
+                android:layout_toLeftOf="@id/imageViewReport"
+                android:src="@drawable/icon_share" />
+            <TextView
+                android:id="@+id/textViewCommentCounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_mid"
+                android:layout_toLeftOf="@id/imageViewShare"
+                android:drawableRight="@drawable/icon_comment"
+                android:textColor="@color/colorTextGray"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_content_small_2" />
 
         </RelativeLayout>
 

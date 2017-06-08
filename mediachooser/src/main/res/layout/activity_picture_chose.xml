@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_picture_chose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.learnncode.mediachooser.activity.PictureChoseActivity">
+
+    <View
+        android:id="@+id/viewStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#78BE20" />
+    <RelativeLayout
+        android:id="@+id/relativeLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/viewStatusBar"
+        android:background="#78BE20">
+
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_navigation_left_from_media_chooser_header_bar" />
+
+
+        <TextView
+            android:id="@+id/doneTextViewViewFromMediaChooserHeaderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/done"
+            android:textColor="@color/headerbar_title_color"
+            android:textSize="@dimen/text_size_tab_host_title" />
+
+        <ImageView
+            android:id="@+id/cameraImageViewFromMediaChooserHeaderBar"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/doneTextViewViewFromMediaChooserHeaderView"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_camera_button" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayoutHeader">
+
+        <GridView
+            android:id="@+id/gridViewImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="multipleChoice"
+            android:columnWidth="100dp"
+            android:drawSelectorOnTop="false"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@android:color/black"
+            android:numColumns="2"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="2dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
