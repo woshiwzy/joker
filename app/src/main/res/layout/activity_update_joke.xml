@@ -7,6 +7,16 @@
     android:background="@color/bg_color"
     tools:context="com.wangzy.joker.activity.UpdateLoadJokeActivity">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="请勿提交非法内容，否则后果自负！" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

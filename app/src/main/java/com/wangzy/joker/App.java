@@ -8,6 +8,8 @@ import com.avos.avoscloud.GetCallback;
 import com.common.BaseApp;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
+import cn.waps.AppConnect;
+
 /**
  * Created by wangzy on 2017/5/26.
  */
@@ -26,15 +28,19 @@ public class App extends BaseApp {
         this.app = this;
         Fresco.initialize(this);
         initLeancloud();
+        initAd();
     }
 
+    private void initAd(){
+        AppConnect.getInstance(this);
+        AppConnect.getInstance(this).initAdInfo();
+
+    }
 
     private void initLeancloud() {
 
         AVOSCloud.initialize(this, "He8bqYMSgzApsWm1K17X0qTR-gzGzoHsz", "IIPPYSgjSBhJTAP8Cm7S9nUb");
         AVOSCloud.setDebugLogEnabled(true);
-
-
         AVQuery<AVObject> avObjectAVQuery = new AVQuery<>("Config");
 
         avObjectAVQuery.getFirstInBackground(new GetCallback<AVObject>() {
@@ -49,9 +55,6 @@ public class App extends BaseApp {
 
     }
 
-    private void initVitamio() {
-
-    }
 
 
     public static App getApp() {

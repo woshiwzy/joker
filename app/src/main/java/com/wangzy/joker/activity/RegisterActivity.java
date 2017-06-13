@@ -94,7 +94,7 @@ public class RegisterActivity extends BaseJokeActivity {
                     finish();
                 } else {
 
-                    Tool.ToastShow(RegisterActivity.this, e.getMessage());
+                    showAVException(RegisterActivity.this,e);
                 }
 
             }

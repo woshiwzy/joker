@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:clickable="true"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textViewReportBad"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_item_height"
+            android:gravity="center"
+            android:tag="text"
+            android:text="不好笑" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/margin_micro"
+            android:layout_marginRight="@dimen/margin_micro"
+            android:background="#EFEEF0" />
+
+        <TextView
+            android:id="@+id/textViewReportBreak"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_item_height"
+            android:gravity="center"
+            android:tag="text_img"
+            android:text="违法（反动,色情等违法内容）" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/margin_micro"
+            android:layout_marginRight="@dimen/margin_micro"
+            android:background="#EFEEF0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_item_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="其他：" />
+
+            <EditText
+                android:id="@+id/editTextReportContent"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_item_height"
+                android:layout_weight="3"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:hint="输入其他其他举报类型"
+                android:maxLines="1"
+                android:tag="mp4" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/margin_micro"
+            android:layout_marginRight="@dimen/margin_micro"
+            android:background="#EFEEF0" />
+
+        <Button
+            android:id="@+id/buttonReport"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_item_height"
+            android:layout_marginBottom="@dimen/margin_mid"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:layout_marginTop="@dimen/margin_mid"
+            android:background="@drawable/shape_button"
+            android:text="举报" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,8 +1,10 @@
 package com.wangzy.joker.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.LinearLayout;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -16,6 +18,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.waps.AppConnect;
 
 public class CommentsActivity extends BaseJokeActivity {
 
@@ -48,7 +51,7 @@ public class CommentsActivity extends BaseJokeActivity {
 
         recycleViewComments.setAdapter(commentsAdapter);
         recycleViewComments.setLayoutManager(new LinearLayoutManager(this));
-//        recycleViewComments.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.HORIZONTAL));
+//      recycleViewComments.addItemDecoration(new RecycleViewDivider(this, LinearLayoutManager.HORIZONTAL));
 
 
         showProgressDialog(false);
@@ -70,6 +73,10 @@ public class CommentsActivity extends BaseJokeActivity {
                 }
             }
         });
+
+        AppConnect.getInstance(this).setAdBackColor(R.color.bg_color); //设置迷你广告广告诧颜色 AppConnect.getInstance(this).setAdForeColor(Color.YELLOW); //若未设置以上两个颜色，则默认为黑底白字
+        LinearLayout miniLayout =(LinearLayout)findViewById(R.id.viewAd);
+        AppConnect.getInstance(this).showMiniAd(this, miniLayout, 10); //默认 10 秒切换一次广告
 
     }
 

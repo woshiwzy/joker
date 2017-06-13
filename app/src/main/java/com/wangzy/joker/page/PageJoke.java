@@ -13,6 +13,7 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.GetCallback;
 import com.baoyz.widget.PullRefreshLayout;
+import com.common.util.ListUtiles;
 import com.common.util.LogUtil;
 import com.common.util.Tool;
 import com.common.view.BasePage;
@@ -20,6 +21,7 @@ import com.wangzy.joker.App;
 import com.wangzy.joker.R;
 import com.wangzy.joker.activity.JokeDetailActivity;
 import com.wangzy.joker.adapter.JokeAdapter;
+import com.wangzy.joker.domain.AdAvObject;
 import com.wangzy.joker.view.RecycleViewDivider;
 
 import java.util.ArrayList;
@@ -27,6 +29,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.waps.AdInfo;
+import cn.waps.AppConnect;
 
 /**
  * Created by wangzy on 2017/5/26.
@@ -54,10 +58,10 @@ public class PageJoke extends BasePage {
 
     AVObject avObjectCurent;
 
-    public PageJoke(Activity activity,AVUser authorUser, String... type) {
+    public PageJoke(Activity activity, AVUser authorUser, String... type) {
         super(activity);
         this.type = type;
-        this.authorUser=authorUser;
+        this.authorUser = authorUser;
         initView();
     }
 
@@ -93,7 +97,7 @@ public class PageJoke extends BasePage {
                 boolean isScrolBottom = isSlideToBottom(recyclerView);
                 if (isScrolBottom) {
 
-                    LogUtil.i(App.tag,"加载更多");
+                    LogUtil.i(App.tag, "加载更多");
                     refresh(true);
 
                 }
@@ -125,14 +129,13 @@ public class PageJoke extends BasePage {
         AVQuery<AVObject> jokerQuery = new AVQuery<>("Joke");
 
 
-
         jokerQuery.include("author");
         jokerQuery.include("author.avatar");
         jokerQuery.setLimit(PAGE_SIZE);
         jokerQuery.orderByDescending("createdAt");
 
-        if(null!=authorUser){
-            jokerQuery.whereEqualTo("author",authorUser);
+        if (null != authorUser) {
+            jokerQuery.whereEqualTo("author", authorUser);
 
             ArrayList<String> types = new ArrayList<>();
 
@@ -143,7 +146,7 @@ public class PageJoke extends BasePage {
 
 
             jokerQuery.whereContainedIn("type", types);
-        }else {
+        } else {
 
             ArrayList<String> types = new ArrayList<>();
             for (String str : type) {
@@ -171,9 +174,33 @@ public class PageJoke extends BasePage {
                 viewLoadMore.setVisibility(View.GONE);
 
                 if (null == e) {
-                    jokeAdapter.addMoreJokers(list);
 
-                    LogUtil.i(App.tag,"new size:"+jokeAdapter.getItemCount());
+                    if (null == authorUser) {
+
+                        AdInfo adInfo = AppConnect.getInstance(activity).getAdInfo();
+                        if (null != adInfo && !ListUtiles.isEmpty(list)) {
+
+                            AdAvObject adAvObject = new AdAvObject(adInfo);
+                            jokeAdapter.addMoreJokers(list, adAvObject);
+
+                        } else {
+
+                            if (!ListUtiles.isEmpty(list)) {
+                                jokeAdapter.addMoreJokers(list);
+                            }
+
+                        }
+
+                    } else if (!ListUtiles.isEmpty(list)) {
+                        jokeAdapter.addMoreJokers(list);
+                    }
+
+                    if (ListUtiles.isEmpty(list) && loadMore) {
+
+                        Tool.ToastShow(activity, "小编正在提交更多搞笑内容，骚年莫急！");
+                    }
+
+                    LogUtil.i(App.tag, "new size:" + jokeAdapter.getItemCount());
                 } else {
                     LogUtil.e(App.tag, "请求报错");
                 }

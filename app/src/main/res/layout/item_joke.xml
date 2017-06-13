@@ -84,39 +84,38 @@
             android:padding="@dimen/margin_micro">
 
 
-            <TextView
-                android:id="@+id/textViewNiceCount"
+            <LinearLayout
+                android:id="@+id/linearLayoutPairse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
-                android:gravity="center"
-                android:textColor="@color/colorTextGray"
-                android:visibility="visible" />
+                android:gravity="center">
 
-
-            <RelativeLayout
-                android:id="@+id/relativeLayoutBuleContents"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/margin_mid"
-                android:layout_toLeftOf="@id/textViewNiceCount">
-
-
-                <com.common.view.BubbleView
-                    android:id="@+id/bubbleView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/imageViewParise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_mid"
+                    android:clickable="false"
                     android:src="@drawable/icon_good" />
 
-            </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/textViewNiceCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextGray"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/imageViewReport"
@@ -124,7 +123,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
-                android:layout_toLeftOf="@id/relativeLayoutBuleContents"
+                android:layout_toLeftOf="@id/linearLayoutPairse"
+                android:visibility="gone"
                 android:src="@drawable/icon_report" />
 
 

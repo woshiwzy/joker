@@ -142,10 +142,10 @@
             android:id="@+id/relativeLayoutSendContent"
             android:layout_width="match_parent"
             android:layout_height="@dimen/input_item_height"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
             android:layout_alignParentBottom="true"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
 
             <TextView
@@ -186,26 +186,36 @@
             <include layout="@layout/h_splite" />
 
 
-            <TextView
-                android:id="@+id/textViewNiceCount"
+            <LinearLayout
+                android:id="@+id/linearLayoutPairse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
-                android:gravity="center"
-                android:textColor="@color/colorTextGray"
-                android:visibility="visible" />
+                android:gravity="center">
 
 
-            <ImageView
-                android:id="@+id/imageViewParise"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/margin_mid"
-                android:layout_toLeftOf="@id/textViewNiceCount"
-                android:src="@drawable/icon_good" />
+                <ImageView
+                    android:id="@+id/imageViewParise"
+                    android:layout_width="wrap_content"
+                    android:clickable="false"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_mid"
+                    android:src="@drawable/icon_good" />
+
+
+
+                <TextView
+                    android:id="@+id/textViewNiceCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextGray"
+                    android:visibility="visible" />
+            </LinearLayout>
 
 
             <ImageView
@@ -214,8 +224,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
-                android:layout_toLeftOf="@id/imageViewParise"
-                android:src="@drawable/icon_report" />
+                android:layout_toLeftOf="@id/linearLayoutPairse"
+                android:src="@drawable/icon_report"
+                android:visibility="gone" />
 
 
             <ImageView
@@ -235,23 +246,25 @@
                 android:layout_marginRight="@dimen/margin_mid"
                 android:layout_toLeftOf="@id/imageViewShare"
                 android:drawableRight="@drawable/icon_comment"
-                android:textColor="@color/colorTextGray"
                 android:gravity="center|left"
+                android:textColor="@color/colorTextGray"
                 android:textSize="@dimen/text_size_content_small_2" />
 
 
         </RelativeLayout>
 
 
-        <RelativeLayout
-            android:id="@+id/recyleViewCommit"
+        <LinearLayout
+            android:id="@+id/viewContainer"
+            android:orientation="vertical"
             android:layout_width="match_parent"
+            android:gravity="bottom"
             android:layout_height="match_parent"
             android:layout_above="@id/linearLayoutOperate"
             android:layout_below="@id/relativeLayoutContent">
 
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

@@ -30,13 +30,14 @@
             android:text="个人中心" />
 
 
-        <ImageView
+        <TextView
             android:id="@+id/viewFeedBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/margin_mid"
+            android:text="反馈"
             android:src="@drawable/icon_feedback" />
 
         <View
@@ -236,7 +237,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/viewMenus"
-                android:background="#bbffaa"
                 android:orientation="vertical">
 
             </RelativeLayout>

@@ -24,6 +24,8 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.waps.AppConnect;
+import cn.waps.AppListener;
 
 public class MainActivity extends BaseJokeActivity {
 
@@ -92,8 +94,17 @@ public class MainActivity extends BaseJokeActivity {
             }
         });
 
-
         checkIndex(0);
+
+//        AppConnect.getInstance(this).showPopAd(this);
+//
+//        AppConnect.getInstance(this).showPopAd(this,new AppListener(){
+//
+//        });
+//
+//        AppConnect.getInstance(this).checkUpdate(this);
+
+
     }
 
 
@@ -112,6 +123,8 @@ public class MainActivity extends BaseJokeActivity {
 
             }, 2000);
         } else {//退出程序
+
+            AppConnect.getInstance(this).close();
             this.finish();
             System.exit(0);
         }

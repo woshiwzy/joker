@@ -2,6 +2,7 @@ package com.wangzy.joker.activity;
 
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -38,6 +40,7 @@ import com.wangzy.joker.constants.Constant;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.waps.AppConnect;
 
 public class JokeDetailActivity extends BaseJokeActivity {
 
@@ -139,6 +142,22 @@ public class JokeDetailActivity extends BaseJokeActivity {
     }
 
 
+    @OnClick(R.id.linearLayoutPairse)
+    public void onCLickParise() {
+        if (null != jokeObject) {
+
+            jokeObject.increment("nice");
+            jokeObject.setFetchWhenSave(true);
+            jokeObject.saveEventually();
+//                    textViewNiceCount.setText(String.valueOf(jokeObject.getInt("nice")));
+
+            textViewNiceCount.setText(String.valueOf(jokeObject.getInt("nice") + jokeObject.getInt("initNiceCount")));
+
+            needBackRefresh = true;
+
+        }
+    }
+
     @Override
     public void initView() {
 
@@ -160,30 +179,32 @@ public class JokeDetailActivity extends BaseJokeActivity {
         textViewJokerTitle.setText(jokeObject.getString("title"));
 
 
-        String result=(jokeObject.getInt("commentCount") > 0?" " + jokeObject.getInt("commentCount") + " ":"");
+        String result = (jokeObject.getInt("commentCount") > 0 ? " " + jokeObject.getInt("commentCount") + " " : "");
 
         textViewCommentCounts.setText(result);
 
-        imageViewParise.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        imageViewParise.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                if (null != jokeObject) {
+//
+//                    jokeObject.increment("nice");
+//                    jokeObject.setFetchWhenSave(true);
+//                    jokeObject.saveEventually();
+////                    textViewNiceCount.setText(String.valueOf(jokeObject.getInt("nice")));
+//
+//                    textViewNiceCount.setText(String.valueOf(jokeObject.getInt("nice") + jokeObject.getInt("initNiceCount")));
+//
+//                    needBackRefresh = true;
+//
+//                }
+//
+//
+//            }
+//        });
 
-                if (null != jokeObject) {
 
-                    jokeObject.increment("nice");
-                    jokeObject.setFetchWhenSave(true);
-                    jokeObject.saveEventually();
-//                    textViewNiceCount.setText(String.valueOf(jokeObject.getInt("nice")));
-
-                    textViewNiceCount.setText(String.valueOf(jokeObject.getInt("nice") + jokeObject.getInt("initNiceCount")));
-
-                    needBackRefresh = true;
-
-                }
-
-
-            }
-        });
         imageViewReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -232,22 +253,21 @@ public class JokeDetailActivity extends BaseJokeActivity {
 //                imageViewImg.setVisibility(View.VISIBLE);
 //                displayImage(url, imageViewImg);
 //                webViewVideo.loadUrl(jokeObject.getString("videoUrl"));
-
             }
             break;
         }
 
+//        AppConnect.getInstance(this).setAdBackColor(Color.WHITE); //设置迷你广告广告诧颜色 AppConnect.getInstance(this).setAdForeColor(Color.YELLOW); //若未设置以上两个颜色，则默认为黑底白字
+//        LinearLayout miniLayout =(LinearLayout)findViewById(R.id.viewContainer);
+//        AppConnect.getInstance(this).showMiniAd(this, miniLayout, 10); //默认 10 秒切换一次广告
     }
 
 
     @OnClick(R.id.textViewSend)
     public void onClickSend() {
 
-
         if (null == AVUser.getCurrentUser()) {
-
-            Tool.ToastShow(this,"请先登录！");
-
+            Tool.ToastShow(this, "请先登录！");
             return;
         }
 
