@@ -8,7 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/mediachooser/mediachooser.iml" filepath="$PROJECT_DIR$/mediachooser/mediachooser.iml" />
       <module fileurl="file://$PROJECT_DIR$/model_cretve/model_cretve.iml" filepath="$PROJECT_DIR$/model_cretve/model_cretve.iml" />
       <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/vitamio/vitamio.iml" filepath="$PROJECT_DIR$/vitamio/vitamio.iml" />
     </modules>
   </component>
 </project>

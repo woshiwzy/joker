@@ -89,6 +89,7 @@
 
         <LinearLayout
             android:id="@+id/linearLayooutMe"
+            android:visibility="gone"
             style="@style/LinearLayout_Tab">
 
             <com.tab.widget.CheckImageView

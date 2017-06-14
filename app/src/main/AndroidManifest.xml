@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wangzy.joker">
 
-    <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,7 +21,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,17 +34,15 @@
             android:name=".activity.JokeDetailActivity"
             android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true" />
-        <activity
-            android:name=".activity.PlayVideoDemoActivity"
-            android:hardwareAccelerated="true" />
+
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.EditPersonInfoActivity" />
         <activity android:name=".activity.UpdateLoadJokeActivity" />
-        <activity android:name=".activity.CommentsActivity" android:screenOrientation="portrait"/>
-
         <activity
-            android:name="com.avos.avoscloud.feedback.ThreadActivity" >
-        </activity>
+            android:name=".activity.CommentsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.avos.avoscloud.feedback.ThreadActivity"></activity>
 
         <service android:name="com.avos.avoscloud.PushService" />
 
@@ -60,12 +55,15 @@
         </receiver>
 
 
-        <meta-data android:name="APP_ID" android:value="f24554742a45822a82ce689485bd867e"/>
-        <meta-data android:name="APP_PID" android:value="samsung"/>
+        <meta-data
+            android:name="APP_ID"
+            android:value="f24554742a45822a82ce689485bd867e" />
+        <meta-data
+            android:name="APP_PID"
+            android:value="google" />
 
 
     </application>
-
 
 
 </manifest>

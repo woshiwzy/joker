@@ -10,7 +10,7 @@ android {
 
         multiDexEnabled true
         versionCode 2
-        versionName "1.1 201706121230"
+        versionName "1.1 20170614G"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -50,7 +50,6 @@ dependencies {
     // 目前新浪微博官方只提供 jar 包的集成方式
     // 请手动下载新浪微博 SDK 的 jar 包，将其放在 libs 目录下进行集成
     // LeanCloud 应用内搜索包
-    compile project(':vitamio')
     compile project(':mediachooser')
     compile project(':pickerview')
     compile project(':filepickermodel')

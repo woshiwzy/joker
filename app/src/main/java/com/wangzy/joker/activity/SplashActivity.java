@@ -3,6 +3,7 @@ package com.wangzy.joker.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,15 +31,28 @@ public class SplashActivity extends BaseActivity {
     @BindView(R.id.textViewSplash)
     TextView textViewSplash;
 
-
     @BindView(R.id.imageViewAd)
     ImageView imageViewAd;
+
+//    private static final String POSITION_ID = "b373ee903da0c6fc9c9da202df95a500";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
+
+
+//        ApplicationInfo appInfo = null;
+//        try {
+//            appInfo = this.getPackageManager()
+//                    .getApplicationInfo(getPackageName(),
+//                            PackageManager.GET_META_DATA);
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        String msg=appInfo.metaData.getString("APP_PID");
 
 
         Timer timer = new Timer();
@@ -89,6 +103,36 @@ public class SplashActivity extends BaseActivity {
 
 
         }
+
+//        if("xiaomi".equals(msg)){
+//
+//            ViewGroup mContainer = (ViewGroup) findViewById(R.id.splash_ad_container);
+//
+//            SplashAd splashAd = new SplashAd(this, mContainer, R.mipmap.ic_launcher, new SplashAdListener() {
+//                @Override
+//                public void onAdPresent() {
+//                    // 开屏广告展示
+//                }
+//
+//                @Override
+//                public void onAdClick() {
+//                    //用户点击了开屏广告
+//                }
+//
+//                @Override
+//                public void onAdDismissed() {
+//                    //这个方法被调用时，表示从开屏广告消失。
+//
+//
+//                }
+//
+//                @Override
+//                public void onAdFailed(String s) {
+//                }
+//            });
+//            splashAd.requestAd(POSITION_ID);
+//        }
+
 
     }
 

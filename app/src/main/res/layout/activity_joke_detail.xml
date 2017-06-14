@@ -144,7 +144,9 @@
             android:layout_height="@dimen/input_item_height"
             android:layout_alignParentBottom="true"
             android:background="@android:color/white"
+            android:layout_marginBottom="@dimen/input_item_height_"
             android:focusable="true"
+            android:visibility="invisible"
             android:focusableInTouchMode="true">
 
 
@@ -245,6 +247,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/margin_mid"
                 android:layout_toLeftOf="@id/imageViewShare"
+                android:visibility="gone"
                 android:drawableRight="@drawable/icon_comment"
                 android:gravity="center|left"
                 android:textColor="@color/colorTextGray"

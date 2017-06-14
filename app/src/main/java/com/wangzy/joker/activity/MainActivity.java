@@ -40,7 +40,8 @@ public class MainActivity extends BaseJokeActivity {
     BasePage pageJokerText;
     BasePage pageJokerImg;
     BasePage pageJokerVideo;
-    BasePage pageMe;
+
+//    BasePage pageMe;
 
     BasePage currentPage;
 
@@ -78,15 +79,20 @@ public class MainActivity extends BaseJokeActivity {
         relativeLayoutContent.addView(pageJokerVideo.getRootView(), lpp);
         this.basePages.add(pageJokerVideo);
 
-        pageMe = new PageMe(this);
-        relativeLayoutContent.addView(pageMe.getRootView(), lpp);
-        this.basePages.add(pageMe);
+//        pageMe = new PageMe(this);
+//        relativeLayoutContent.addView(pageMe.getRootView(), lpp);
+//        this.basePages.add(pageMe);
+
+
+
 
         tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutTextJoke));
         tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutImgJoke));
 //        tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutGifJoke));
         tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutVideoJoke));
-        tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutMe));
+
+//        tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutMe));
+
         tabLayout.setOnTabItemClickListener(new OnTabItemClickListener() {
             @Override
             public void onCheckIndex(int index, int total, TabItem tabItem) {

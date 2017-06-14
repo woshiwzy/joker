@@ -96,6 +96,7 @@
 
     <dimen name="input_deactive_height">140dp</dimen>
     <dimen name="input_item_height">40dp</dimen>
+    <dimen name="input_item_height_">-40dp</dimen>
     <dimen name="input_item_height_b1">50dp</dimen>
     <dimen name="input_item_height_p">70dp</dimen>
     <dimen name="input_content_height">120dp</dimen>

@@ -7,6 +7,8 @@ import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.GetCallback;
 import com.common.BaseApp;
 import com.facebook.drawee.backends.pipeline.Fresco;
+//import com.xiaomi.ad.AdSdk;
+//import com.xiaomi.ad.AdSdk;
 
 import cn.waps.AppConnect;
 
@@ -29,12 +31,17 @@ public class App extends BaseApp {
         Fresco.initialize(this);
         initLeancloud();
         initAd();
+        initMiAd();
     }
 
     private void initAd(){
         AppConnect.getInstance(this);
         AppConnect.getInstance(this).initAdInfo();
 
+    }
+    private void initMiAd(){
+//        AdSdk.initialize(this,"2882303761517587016");
+//        AdSdk.setDebugOn();
     }
 
     private void initLeancloud() {
