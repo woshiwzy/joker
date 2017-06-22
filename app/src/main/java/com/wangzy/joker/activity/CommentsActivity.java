@@ -18,7 +18,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.waps.AppConnect;
 
 public class CommentsActivity extends BaseJokeActivity {
 
@@ -74,9 +73,9 @@ public class CommentsActivity extends BaseJokeActivity {
             }
         });
 
-        AppConnect.getInstance(this).setAdBackColor(R.color.bg_color); //设置迷你广告广告诧颜色 AppConnect.getInstance(this).setAdForeColor(Color.YELLOW); //若未设置以上两个颜色，则默认为黑底白字
-        LinearLayout miniLayout =(LinearLayout)findViewById(R.id.viewAd);
-        AppConnect.getInstance(this).showMiniAd(this, miniLayout, 10); //默认 10 秒切换一次广告
+//        AppConnect.getInstance(this).setAdBackColor(R.color.bg_color); //设置迷你广告广告诧颜色 AppConnect.getInstance(this).setAdForeColor(Color.YELLOW); //若未设置以上两个颜色，则默认为黑底白字
+//        LinearLayout miniLayout =(LinearLayout)findViewById(R.id.viewAd);
+//        AppConnect.getInstance(this).showMiniAd(this, miniLayout, 10); //默认 10 秒切换一次广告
 
     }
 

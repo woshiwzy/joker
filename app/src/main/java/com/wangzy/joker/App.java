@@ -7,10 +7,9 @@ import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.GetCallback;
 import com.common.BaseApp;
 import com.facebook.drawee.backends.pipeline.Fresco;
-//import com.xiaomi.ad.AdSdk;
-//import com.xiaomi.ad.AdSdk;
 
-import cn.waps.AppConnect;
+//import com.xiaomi.ad.AdSdk;
+//import com.xiaomi.ad.AdSdk;
 
 /**
  * Created by wangzy on 2017/5/26.
@@ -35,8 +34,8 @@ public class App extends BaseApp {
     }
 
     private void initAd(){
-        AppConnect.getInstance(this);
-        AppConnect.getInstance(this).initAdInfo();
+//        AppConnect.getInstance(this);
+//        AppConnect.getInstance(this).initAdInfo();
 
     }
     private void initMiAd(){
@@ -47,7 +46,7 @@ public class App extends BaseApp {
     private void initLeancloud() {
 
         AVOSCloud.initialize(this, "He8bqYMSgzApsWm1K17X0qTR-gzGzoHsz", "IIPPYSgjSBhJTAP8Cm7S9nUb");
-        AVOSCloud.setDebugLogEnabled(true);
+//        AVOSCloud.setDebugLogEnabled(true);
         AVQuery<AVObject> avObjectAVQuery = new AVQuery<>("Config");
 
         avObjectAVQuery.getFirstInBackground(new GetCallback<AVObject>() {

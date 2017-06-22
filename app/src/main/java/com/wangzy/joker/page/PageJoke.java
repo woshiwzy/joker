@@ -21,7 +21,6 @@ import com.wangzy.joker.App;
 import com.wangzy.joker.R;
 import com.wangzy.joker.activity.JokeDetailActivity;
 import com.wangzy.joker.adapter.JokeAdapter;
-import com.wangzy.joker.domain.AdAvObject;
 import com.wangzy.joker.view.RecycleViewDivider;
 
 import java.util.ArrayList;
@@ -29,8 +28,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.waps.AdInfo;
-import cn.waps.AppConnect;
 
 /**
  * Created by wangzy on 2017/5/26.
@@ -144,7 +141,6 @@ public class PageJoke extends BasePage {
             types.add("text_image");
             types.add("mp4");
 
-
             jokerQuery.whereContainedIn("type", types);
         } else {
 
@@ -177,18 +173,8 @@ public class PageJoke extends BasePage {
 
                     if (null == authorUser) {
 
-                        AdInfo adInfo = AppConnect.getInstance(activity).getAdInfo();
-                        if (null != adInfo && !ListUtiles.isEmpty(list)) {
-
-                            AdAvObject adAvObject = new AdAvObject(adInfo);
-                            jokeAdapter.addMoreJokers(list, adAvObject);
-
-                        } else {
-
-                            if (!ListUtiles.isEmpty(list)) {
-                                jokeAdapter.addMoreJokers(list);
-                            }
-
+                        if (!ListUtiles.isEmpty(list)) {
+                            jokeAdapter.addMoreJokers(list);
                         }
 
                     } else if (!ListUtiles.isEmpty(list)) {

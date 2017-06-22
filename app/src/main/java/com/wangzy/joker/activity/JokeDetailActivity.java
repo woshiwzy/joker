@@ -2,7 +2,6 @@ package com.wangzy.joker.activity;
 
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -11,7 +10,6 @@ import android.text.Html;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -40,7 +38,6 @@ import com.wangzy.joker.constants.Constant;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.waps.AppConnect;
 
 public class JokeDetailActivity extends BaseJokeActivity {
 

@@ -32,7 +32,6 @@ import com.wangzy.joker.R;
 import com.wangzy.joker.activity.BaseJokeActivity;
 import com.wangzy.joker.activity.JokeDetailActivity;
 import com.wangzy.joker.constants.Constant;
-import com.wangzy.joker.domain.AdAvObject;
 import com.wangzy.joker.picasso.VideoRequestHandler;
 
 import java.util.ArrayList;
@@ -40,8 +39,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.waps.AdInfo;
-import cn.waps.AppConnect;
 
 /**
  * Created by wangzy on 2017/5/26.
@@ -107,14 +104,14 @@ public abstract class JokeAdapter extends RecyclerView.Adapter<RecyclerView.View
     public int getItemViewType(int position) {
 
         AVObject adAvObject = jokes.get(position);
-
-        if (adAvObject instanceof AdAvObject) {
-
-            return TYPE_AD;
-        } else {
+//
+//        if (adAvObject instanceof AdAvObject) {
+//
+//            return TYPE_AD;
+//        } else {
 
             return TYPE_JOKE;
-        }
+//        }
     }
 
 
@@ -343,38 +340,38 @@ public abstract class JokeAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         } else {
 
-            ViewHolder vh = (ViewHolder) holderBase;
-
-
-            final AdAvObject avobject = (AdAvObject) jokes.get(position);
-
-            if (null != avobject && null != avobject.getAdInfo()) {
-
-                final AdInfo adInfo = avobject.getAdInfo();
-
-                vh.imageViewAdIcon.setImageBitmap(adInfo.getAdIcon());
-                vh.textViewAdText.setText(adInfo.getAdText());
-
-
-                vh.card_view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        adInfo.getAppType();
-
-
-                        AppConnect.getInstance(context).clickAd(context, adInfo.getAdId());
-
-                    }
-                });
-
-//                String adUrl = adInfo.getImageUrls()[0];
-//                if (!StringUtils.isEmpty(adUrl)) {
-//                    Picasso.with(context).load(adUrl).into(vh.imageViewAdIcon);
-//                }
-
-
-            }
+//            ViewHolder vh = (ViewHolder) holderBase;
+//
+//
+//            final AdAvObject avobject = (AdAvObject) jokes.get(position);
+//
+//            if (null != avobject && null != avobject.getAdInfo()) {
+//
+//                final AdInfo adInfo = avobject.getAdInfo();
+//
+//                vh.imageViewAdIcon.setImageBitmap(adInfo.getAdIcon());
+//                vh.textViewAdText.setText(adInfo.getAdText());
+//
+//
+//                vh.card_view.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//
+//                        adInfo.getAppType();
+//
+//
+//                        AppConnect.getInstance(context).clickAd(context, adInfo.getAdId());
+//
+//                    }
+//                });
+//
+////                String adUrl = adInfo.getImageUrls()[0];
+////                if (!StringUtils.isEmpty(adUrl)) {
+////                    Picasso.with(context).load(adUrl).into(vh.imageViewAdIcon);
+////                }
+//
+//
+//            }
 
         }
 

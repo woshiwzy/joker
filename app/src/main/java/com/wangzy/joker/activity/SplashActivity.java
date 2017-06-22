@@ -22,8 +22,6 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.waps.AdInfo;
-import cn.waps.AppConnect;
 
 public class SplashActivity extends BaseActivity {
 
@@ -81,28 +79,28 @@ public class SplashActivity extends BaseActivity {
         }, 3 * 1000);
 
 
-        final AdInfo adInfo = AppConnect.getInstance(this).getAdInfo();
-
-        if (null != adInfo) {
-
-            try {
-                String url = adInfo.getImageUrls()[0];
-                Picasso.with(this).load(url).fit().into(imageViewAd);
-                imageViewAd.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        AppConnect.getInstance(SplashActivity.this).clickAd(SplashActivity.this, adInfo.getAdId());
-                    }
-                });
-
-            } catch (Exception e) {
-                e.printStackTrace();
-
-            }
-
-
-        }
+//        final AdInfo adInfo = AppConnect.getInstance(this).getAdInfo();
+//
+//        if (null != adInfo) {
+//
+//            try {
+//                String url = adInfo.getImageUrls()[0];
+//                Picasso.with(this).load(url).fit().into(imageViewAd);
+//                imageViewAd.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//
+//                        AppConnect.getInstance(SplashActivity.this).clickAd(SplashActivity.this, adInfo.getAdId());
+//                    }
+//                });
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//
+//            }
+//
+//
+//        }
 
 //        if("xiaomi".equals(msg)){
 //

@@ -1,6 +1,7 @@
 package com.wangzy.joker.activity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,6 @@ import com.tab.TabLayout;
 import com.wangzy.joker.R;
 import com.wangzy.joker.constants.Constant;
 import com.wangzy.joker.page.PageJoke;
-import com.wangzy.joker.page.PageMe;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -24,8 +24,6 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.waps.AppConnect;
-import cn.waps.AppListener;
 
 public class MainActivity extends BaseJokeActivity {
 
@@ -84,8 +82,6 @@ public class MainActivity extends BaseJokeActivity {
 //        this.basePages.add(pageMe);
 
 
-
-
         tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutTextJoke));
         tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutImgJoke));
 //        tabLayout.addTabItem(findLinearLayout(R.id.linearLayooutGifJoke));
@@ -130,7 +126,6 @@ public class MainActivity extends BaseJokeActivity {
             }, 2000);
         } else {//退出程序
 
-            AppConnect.getInstance(this).close();
             this.finish();
             System.exit(0);
         }
