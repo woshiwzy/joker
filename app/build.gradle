@@ -10,7 +10,7 @@ android {
 
         multiDexEnabled true
         versionCode 2
-        versionName "1.1 201706121230"
+        versionName "1.1 201706222105"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
